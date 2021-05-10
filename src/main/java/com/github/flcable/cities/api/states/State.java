@@ -1,4 +1,4 @@
-package com.github.flcable.cities.api.staties;
+package com.github.flcable.cities.api.states;
 
 
 
@@ -18,9 +18,6 @@ import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
 
-
-import javax.persistence.*;
-
 @Entity(name = "State")
 @Table(name = "estado")
 @TypeDefs({
@@ -38,11 +35,7 @@ public class State {
 
     private Integer ibge;
 
-/*
-   @Column(name = "pais")
-   private Integer countryId;*/
 
-    // 2nd - @ManyToOne
     @ManyToOne
     @JoinColumn(name = "pais", referencedColumnName = "id")
     private Country country;
@@ -79,7 +72,5 @@ public class State {
         return country;
     }
 
-    /*public Integer getCountryId() {
-      return countryId;
-  }*/
+
 }

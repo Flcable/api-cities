@@ -1,4 +1,4 @@
-package com.github.flcable.cities.api.staties;
+package com.github.flcable.cities.api.states;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
